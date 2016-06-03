@@ -14,6 +14,13 @@ public class Article extends PublishableEntity {
     private String title;
     private Category category;
 
+    protected Article() {}
+
+    public Article(String title, Category category) {
+        this.title = title;
+        this.category = category;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() { return id; }

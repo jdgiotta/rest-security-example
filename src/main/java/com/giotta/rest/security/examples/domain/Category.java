@@ -14,6 +14,12 @@ public class Category {
     private String name;
     private Set<Article> articles;
 
+    protected Category() { }
+
+    public Category(String name) {
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() { return id; }
